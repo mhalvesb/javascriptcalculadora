@@ -10,6 +10,12 @@ body, html{
     background-color: #121314;
 }
 
+
+.mode{
+    color: white;
+    background-color: #111111;
+    margin: 20px 0px;
+}
 .calculadora{
     display: flex;
     background-color: #202124;
@@ -25,6 +31,8 @@ body, html{
 .valor{
     display: flex;
     align-items: center;
+    border-radius: 5px;
+    margin-top: 15px;
 }
 
 .botao{
@@ -76,4 +84,9 @@ h2{
     width: 350px;
     height: 80px;
     margin-bottom: 50px;
+}
+
+.light{
+    background-color: rgb(200, 200, 200);
+    color: black;
 }

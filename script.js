@@ -1,8 +1,34 @@
 let botoes = document.querySelectorAll(".botao");
+let modo = document.querySelector(".mode");
 let value = document.querySelector(".value");
 let classes = document.querySelectorAll(".num");
 let valor = 0;
 let simbolo = "";
+let isLight = document.querySelectorAll("div");
+
+
+modo.addEventListener("click", () =>{
+    modes();
+})
+function modes(){
+    for(i = 0; i < isLight.length; i++){
+        if(isLight[i].classList.contains("light")){
+            isLight[i].classList.remove("light");
+            modo.innerText = "Modo escuro";
+            modo.style.backgroundColor = "black";
+            modo.style.color = "white";
+        } else{
+            modo.innerText = "Modo claro";
+            modo.style.backgroundColor = "white";
+            modo.style.color = "black";
+            isLight[i].classList.add("light");
+        }
+    }
+
+}
+
+
+
 
 function calcular(calculo){
 
