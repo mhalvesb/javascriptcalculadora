@@ -1,122 +1,81 @@
-
-
-
+let botoes = document.querySelectorAll(".botao");
+let value = document.querySelector(".value");
+let classes = document.querySelectorAll(".num");
 let valor = 0;
+let simbolo = "";
 
-let soma = document.querySelector(".soma");
-soma.addEventListener("click", ()=>{
-    somar();
-})
-function somar(){
-    alterarvalor();
+function calcular(calculo){
+        if(simbolo === "+"){
+            valor += calculo;
+        } else if (simbolo === "-"){
+            valor -= calculo;
+        } else if (simbolo === "*"){
+            valor *= calculo;
+        } else if (simbolo === "/"){
+            valor /= calculo;
+        }
+    return value.innerHTML = valor;
 }
 
-
-
-let botao1 = document.querySelector(".botao1");
-botao1.addEventListener("click", () =>{
-    somar1();
+classes[0].addEventListener("click", ()=>{
+    simbolo = "+";
 })
-
-function somar1(){
-    valor = valor + 1;
-    
-    console.log(`Adicionado mais 1`);
-    return valor;
-}
-
-let botao2 = document.querySelector(".botao2");
-botao2.addEventListener("click", () =>{
-    somar2();
+classes[1].addEventListener("click", ()=>{
+    simbolo = "-";
 })
 
-function somar2(){
-    valor = valor + 2;
-    
-    console.log(`Adicionado mais 2`);
-    return valor;
-}
-
-let botao3 = document.querySelector(".botao3");
-botao3.addEventListener("click", () =>{
-    somar3();
+classes[2].addEventListener("click", ()=>{
+    simbolo = "*";
 })
 
-function somar3(){
-    valor = valor + 3;
-    console.log(`Adicionado mais 3`);
-    return valor;
-}
+classes[3].addEventListener("click", ()=>{
+    simbolo = "/";
+})
+
+classes[4].addEventListener("click", () =>{
+    valor = 0;
+    calcular(0);
+})
 
 
-let botao4 = document.querySelector(".botao4")
-    botao4.addEventListener("click", () =>{
 
-    })
+botoes[0].addEventListener("click", () =>{
+    calcular(1);
+});
+botoes[1].addEventListener("click", () =>{
+    calcular(2);
+});
 
-    function somar4(){
-        valor = valor + 4;
-        return valor;
-    }
+botoes[2].addEventListener("click", () =>{
+    calcular(3);
+});
 
-    let botao5 = document.querySelector(".botao5");
-    botao5.addEventListener("click", () =>{
-        somar5();
-    })
+botoes[3].addEventListener("click", () =>{
+    calcular(4);
+});
 
-    function somar5(){
-        valor = valor + 5;
-        return valor;
-    }
+botoes[4].addEventListener("click", () =>{
+    calcular(5);
+});
 
-    let botao6 = document.querySelector(".botao6");
-    botao6.addEventListener("click", () =>{
-        somar6();
-    })
+botoes[5].addEventListener("click", () =>{
+    calcular(6);
+});
 
-    function somar6(){
-        valor = valor + 6;
-        return valor;
-    }
+botoes[6].addEventListener("click", () =>{
+    calcular(7);
+});
 
-    let botao7 = document.querySelector(".botao7");
-    botao7.addEventListener("click", () =>{
-        somar7();
-    })
-
-    function somar7(){
-        valor = valor + 7;
-        return valor;
-    }
-
-    let botao8 = document.querySelector(".botao8");
-    botao8.addEventListener("click", () =>{
-        somar8();
-    })
-
-    function somar8(){
-        valor = valor + 8;
-        return valor;
-    }
-
-    let botao9 = document.querySelector(".botao9");
-    botao9.addEventListener("click", () =>{
-        valor = valor + 9;
-        return valor;
-    })
-
-
-    let botao10 = document.querySelector(".botao10");
-    botao10.addEventListener("click", () =>{
-        valor = valor + 10;
-        return valor;
-    })
+botoes[7].addEventListener("click", () =>{
+    calcular(8);
+});
+botoes[8].addEventListener("click", () =>{
+    calcular(9);
+});
+botoes[9].addEventListener("click", () =>{
+    calcular(10);
+});
 
 
 
 
-
-function alterarvalor(){
-    const number = document.querySelector(".value");
-    number.innerHTML = valor;
-}
